@@ -11,7 +11,7 @@ export function EntryForm() {
 
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
-    if (inputElm.current) {
+    if (inputElm.current && inputElm.current.value.length) {
       addTodo(inputElm.current.value);
       inputElm.current.value = "";
     }
